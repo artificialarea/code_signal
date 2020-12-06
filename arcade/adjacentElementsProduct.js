@@ -94,8 +94,9 @@ function adjacentElementsProduct3(inputArray) {
 // console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3])); // expected: 21
 // console.log(adjacentElementsProduct([-23, 4, -3, 8, -12])); // expected: -12
 
-// setting up a Handler, 
-// so can semi-dynamically invoke multiple functions
+// setting up a Handler system, 
+// so can semi-dynamically invoke multiple functions to console log
+// by just adding a function name as a Handler method
 const Handler = {
     adjacentElementsProduct1,
     adjacentElementsProduct2,
@@ -103,12 +104,12 @@ const Handler = {
 };
 function testSeveralVersions(num) {
     for (let i = 1; i <= num; i++) {
-        console.log(`\n/////////////// adjacentElementsProduct${i}`)
+        console.log(`\n/////////////// adjacentElementsProduct-v${i}`)
         console.log(Handler[`adjacentElementsProduct${i}`]([1, 2, 3, 4, 5]));   // expected: 20
         console.log(Handler[`adjacentElementsProduct${i}`]([3, 6, -2, -5, 7, 3]));  // expected: 21
         console.log(Handler[`adjacentElementsProduct${i}`]([-23, 4, -3, 8, -12])); // expected: -12
     }
 }
-testSeveralVersions(3);
+testSeveralVersions(Object.keys(Handler).length);
 
 
