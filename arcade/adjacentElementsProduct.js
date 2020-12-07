@@ -52,8 +52,7 @@ function adjacentElementsProduct2(inputArray) {
 // it shifts the starting index of the .map currentValue to `n` elements in the array
 // while maintainng the start of the original array index at 0.
 // Which allows the same array to be parsed at two different starting points!!!
-// Beyond me...
-// Math.max is pretty cool too.
+// Math.max is pretty cool, too.
 //
 // function adjacentElementsProduct(inputArray) { 
 //     // console.log(...inputArray.slice(1).map((x,i)=>[x*inputArray[i]]));
@@ -94,7 +93,7 @@ function adjacentElementsProduct3(inputArray) {
 // console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3])); // expected: 21
 // console.log(adjacentElementsProduct([-23, 4, -3, 8, -12])); // expected: -12
 
-// setting up a Handler system, 
+// Setting up a Handler system, 
 // so can semi-dynamically invoke multiple functions to console log
 // by just adding a function name as a Handler method
 const Handler = {
@@ -104,7 +103,7 @@ const Handler = {
 };
 function testSeveralVersions(num) {
     for (let i = 1; i <= num; i++) {
-        console.log(`\n/////////////// adjacentElementsProduct-v${i}`)
+        console.log(`\n/////////////// adjacentElementsProduct-v${i}`);
         console.log(Handler[`adjacentElementsProduct${i}`]([1, 2, 3, 4, 5]));   // expected: 20
         console.log(Handler[`adjacentElementsProduct${i}`]([3, 6, -2, -5, 7, 3]));  // expected: 21
         console.log(Handler[`adjacentElementsProduct${i}`]([-23, 4, -3, 8, -12])); // expected: -12
